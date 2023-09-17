@@ -1,0 +1,23 @@
+import os
+def renaming(file):
+    ext = os.path.splitext(file)  # 将文件名路径与后缀名分开
+    if ext[1] == '.txt':  # 文件名：ext[0]
+        new_name = ext[0] + '.jpg'  # 文件后缀：ext[1]
+        os.rename(file, new_name)  #已切换工作地址，直接替换后缀
+    elif ext[1] == '.jpg':
+        new_name = ext[0] + '.txt'
+        os.rename(file, new_name)
+        os.system(new_name)
+        new_name1 = ext[0] + '.jpg'  # 文件后缀：ext[1]
+        os.rename(new_name, new_name1)  # 
+path="C:/Users/11376/Desktop/ljk"
+
+files = os.listdir(path)    # 获取当前目录的所有文件及文件夹
+for file in files:
+        file_path = os.path.join(path, file)  # 获取该文件的绝对路径
+        if os.path.splitext(file)[0] == "日志":
+            renaming(file_path)
+
+
+
+
