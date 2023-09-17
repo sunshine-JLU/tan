@@ -10,7 +10,7 @@ def renaming(file):
         os.system(new_name)
         new_name1 = ext[0] + '.jpg'  # 文件后缀：ext[1]
         os.rename(new_name, new_name1)  # 
-path="C:/Users/11376/Desktop/ljk"
+path="C:/Users"#日记.txt所在文件夹，这里是举例
 
 files = os.listdir(path)    # 获取当前目录的所有文件及文件夹
 for file in files:
