@@ -15,7 +15,7 @@ path="C:/Users"#日记.txt所在文件夹，这里是举例
 files = os.listdir(path)    # 获取当前目录的所有文件及文件夹
 for file in files:
         file_path = os.path.join(path, file)  # 获取该文件的绝对路径
-        if os.path.splitext(file)[0] == "日志":
+        if os.path.splitext(file)[0] == "日记":#日记.txt的名字
             renaming(file_path)
 
 
